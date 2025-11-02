@@ -1,0 +1,57 @@
+# Apply gtk theming
+exec_always ~/.config/sway/scripts/import-gsettings
+
+# Set inner/outer gaps
+gaps inner 8
+gaps outer 5
+
+# Hide titlebar on windows:
+default_border pixel 2
+
+# Default Font
+font pango:Noto Sans Regular 10
+
+# Thin borders:
+smart_borders off
+
+# Set wallpaper:
+exec ~/.azotebg
+
+# Title format for windows
+for_window [shell="xdg_shell"] title_format "%title (%app_id)"
+for_window [shell="x_wayland"] title_format "%class - %title"
+
+# nord colors
+set $nord0 #2e3440
+set $nord1 #3b4252
+set $nord2 #434c5e
+set $nord3 #4c566a
+set $nord4 #d8dee9
+set $nord5 #e5e9f0
+set $nord6 #eceff4
+set $nord7 #8fbcbb
+set $nord8 #88c0d0
+set $nord9 #81a1c1
+set $nord10 #5e81ac
+
+# class                 border  bgrnd   text    indctr  chld_brdr
+client.focused          $nord8  $nord0  $nord4  $nord8  $nord8
+client.focused_inactive $nord1  $nord0  $nord4  $nord1  $nord1
+client.unfocused        $nord1  $nord0  $nord4  $nord8  $nord1
+client.urgent           $nord9  $nord0  $nord9  $nord7  $nord9
+client.placeholder      $nord1  $nord0  $nord4  $nord1  $nord1
+client.background       $nord0
+
+# round the corners
+corner_radius 7
+
+blur enable
+blur_passes 3
+blur_radius 3
+
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    swaybar_command waybar
+}

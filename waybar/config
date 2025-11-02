@@ -1,0 +1,167 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin": "8 13 0 13",
+
+    // Modules
+    "modules-left": [
+        "clock#date",
+        "custom/ball1",
+        "clock#time",
+        "custom/ball2",
+        "sway/window",
+    ],
+
+    "modules-center": [
+        "custom/ball3",
+        "sway/workspaces",
+        "custom/ball4",
+    ],
+
+    "modules-right": [
+        "custom/ball5",
+        "idle_inhibitor",
+        "custom/ball6",
+        "cpu",
+        "custom/ball7",
+        "memory",
+        "custom/ball8",
+        "pulseaudio",
+        "custom/ball9",
+        "custom/power",
+    ],
+
+    "clock#time": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "tooltip": false
+    },
+
+    "clock#date": {
+        "interval": 20,
+        "format": "{:%a %e %b %Y}",
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "format": "{}",
+        //"all-outputs": true, // Active window shows only on active display when commented
+        "max-length": 120
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "disable-click": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1a": "一",
+            "2a": "二",
+            "3a": "三",
+            "4a": "四",
+            "5a": "五",
+            "6a": "六",
+            "7a": "七",
+            "8a": "八",
+            "9a": "九",
+            "10a": "十",
+        },
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip-format-activated": "Idle Inhibitor Activated",
+        "tooltip-format-deactivated": "Idle Inhibitor Deactivated"
+    },
+
+    "cpu": {
+        "interval": 5,
+        "tooltip": false,
+        "format": " {usage}%",
+        "states": {
+            "warning": 70,
+            "critical": 90,
+        }
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": " {used:0.1f}G/{total:0.1f}G",
+        "tooltip": false,
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "pulseaudio": {
+        "scroll-step": 2,
+        "format": "{icon} {volume}%",
+        "format-muted":"󰝟 muted",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/power": {
+        "format":"⏻",
+        "on-click": "exec ~/.config/sway/scripts/power_menu.sh",
+        "tooltip": false
+    },
+
+    "custom/ball1": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/ball2": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/ball3": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/ball4": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/ball5": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/ball6": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/ball7": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/ball8": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/ball9": {
+        "format": "",
+        "tooltip": false
+    },
+}

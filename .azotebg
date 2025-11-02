@@ -1,0 +1,4 @@
+#!/bin/bash
+pkill swaybg
+swaybg -i "/home/makeli/Pictures/Wallpapers/ranni.png" -m fill &
+ 

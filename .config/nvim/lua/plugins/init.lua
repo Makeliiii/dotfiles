@@ -13,6 +13,25 @@ return {
     end,
   },
 
+  -- Discord lule
+  {
+    'vyfor/cord.nvim',
+    build = ':Cord update',
+    lazy = false,
+  },
+
+  -- Haskell
+  {
+    'mrcjkb/haskell-tools.nvim',
+    version = '^6',
+    lazy = false,
+  },
+
+  {
+    'neovimhaskell/haskell-vim',
+    lazy = false,
+  }
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
